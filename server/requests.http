@@ -1,0 +1,84 @@
+### Get all products
+GET http://localhost:3000/products
+
+###
+
+### Get all products filtered by name
+GET http://localhost:3000/products?name=keyboard
+
+###
+
+### Get all products sorted by price (ascending)
+GET http://localhost:3000/products?sort=price
+
+###
+
+### Get all products sorted by price (descending)
+GET http://localhost:3000/products?sort=-price
+
+###
+
+### Get a single product by id
+GET http://localhost:3000/products/1
+
+###
+
+### Get a product that doesn't exist (should return 404)
+GET http://localhost:3000/products/9999
+
+###
+
+### Add a new product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Wireless Headphones",
+  "price": 3500,
+  "quantity": 2
+}
+
+###
+
+### Add a product with missing name (should return 400)
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "price": 100,
+  "quantity": 1
+}
+
+###
+
+### Update a product (PUT)
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "name": "Mechanical Keyboard Pro",
+  "price": 3500,
+  "quantity": 4
+}
+
+###
+
+### Update a product that doesn't exist (should return 404)
+PUT http://localhost:3000/products/9999
+Content-Type: application/json
+
+{
+  "name": "Ghost Product",
+  "price": 0,
+  "quantity": 0
+}
+
+###
+
+### Delete a product
+DELETE http://localhost:3000/products/3
+
+###
+
+### Delete a product that doesn't exist (should return 404)
+DELETE http://localhost:3000/products/9999
