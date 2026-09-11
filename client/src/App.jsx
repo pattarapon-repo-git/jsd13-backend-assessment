@@ -89,7 +89,7 @@ export default function App() {
             <span className="logo-icon">🛒</span>
             <div>
               <h1 className="app-title">Product Manager</h1>
-              <p className="app-subtitle">Shopping Cart Assessment</p>
+              <p className="app-subtitle">Shopping Cart</p>
             </div>
           </div>
           <div className="header-stats">
